@@ -1,10 +1,118 @@
 :root {
   --green-500: hsl(158, 36%, 37%);
-  --green-700: hsl(158, 42%, 18%) ;
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 62.5%;
 }
 
 body {
-  color: var(--green-500);
+  font-size: 14px;
+  background-color: var(--cream);
+}
+
+.container {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: var(--white);
+  color: var(--grey);
+  margin: 1rem;
+  border-radius: 8px;
+  justify-content: space-around;
+}
+.container__img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+.container .product {
+  padding: 3rem;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--grey);
+  font-weight: 500;
+  align-self: center;
+}
+.container .product__category {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+.container .product__title {
+  font-family: "Fraunces", serif;
+  font-size: 35px;
+  font-weight: 900;
+  color: var(--black);
+}
+.container .product__description {
+  line-height: 1.5;
+}
+.container .product__price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+  font-family: "Fraunces", serif;
+}
+.container .product__price-current {
+  color: var(--green-500);
+  font-size: 35px;
+}
+.container .product__price-old {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.container .product__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  align-self: center;
+  background: var(--green-500);
+  color: var(--white);
+  border: none;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  outline: inherit;
+}
+.container .product__button svg {
+  align-self: center;
+}
+.container .product__button:hover {
+  background-color: var(--green-700);
+  cursor: pointer;
+}
+@media (min-width: 850px) {
+  .container {
+    margin: 15rem 25rem;
+    padding: 0px;
+    flex-direction: row;
+  }
+  .container__img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+  }
+}
+@media (min-width: 1240px) {
+  .container {
+    margin: 20rem 30rem;
+  }
+  .container .product {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=styles.css.map */

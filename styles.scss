@@ -1,11 +1,127 @@
 // Primary Colors
 :root {
- --green-500: hsl(158, 36%, 37%);
- --green-700: hsl(158, 42%, 18%)
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 62.5%;
 }
 
 body {
-    color: var(--green-500);
-    display: flex;
-    flex-direction: column;
+  font-size: 14px;
+  background-color: var(--cream);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: var(--white);
+  color: var(--grey);
+  margin: 1rem;
+  border-radius: 8px;
+  justify-content: space-around;
+
+  &__img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+  }
+
+  .product {
+    padding: 3rem;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--grey);
+    font-weight: 500;
+    align-self: center;
+
+    &__category {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 400;
+    }
+    &__title {
+      font-family: "Fraunces", serif;
+      font-size: 35px;
+      font-weight: 900;
+      color: var(--black);
+    }
+
+    &__description {
+      line-height: 1.5;
+    }
+    &__price {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem;
+      font-family: "Fraunces", serif;
+
+      &-current {
+        color: var(--green-500);
+        font-size: 35px;
+      }
+      &-old {
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        text-decoration: line-through;
+      }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      width: 100%;
+      align-self: center;
+      background: var(--green-500);
+      color: var(--white);
+      border: none;
+      padding: 1.5rem;
+      border-radius: 8px;
+      font: inherit;
+
+      font-weight: bold;
+      cursor: pointer;
+      outline: inherit;
+
+      svg {
+        // margin: 7px;
+        align-self: center;
+      }
+      &:hover{
+        background-color: var(--green-700);
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (min-width: 850px) {
+    margin: 15rem 25rem;
+    padding: 0px;
+    flex-direction: row;
+
+    &__img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: space-between;
+      align-items: flex-start;
+      width: 50%;
+    }
+  }
+  @media (min-width: 1240px) {
+    margin: 20rem 30rem;
+   
+    .product {
+        justify-content: center;
+    }
+  }
 }
