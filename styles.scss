@@ -1,0 +1,11 @@
+// Primary Colors
+:root {
+ --green-500: hsl(158, 36%, 37%);
+ --green-700: hsl(158, 42%, 18%)
+}
+
+body {
+    color: var(--green-500);
+    display: flex;
+    flex-direction: column;
+}
