@@ -23,7 +23,7 @@ body {
   border-radius: 8px;
   justify-content: space-around;
 }
-.container__img {
+.container picture > img {
   border-radius: 8px 8px 0 0;
   width: 100%;
 }
@@ -68,7 +68,7 @@ body {
 .container .product__button {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   align-self: center;
   background: var(--green-500);
@@ -82,7 +82,8 @@ body {
   outline: inherit;
 }
 .container .product__button svg {
-  align-self: center;
+  margin-right: 4px;
+  width: 26px;
 }
 .container .product__button:hover {
   background-color: var(--green-700);
@@ -93,11 +94,13 @@ body {
     margin: 15rem 25rem;
     padding: 0px;
     flex-direction: row;
+    justify-content: space-between;
   }
-  .container__img {
+  .container picture > img {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    border-radius: 8px 0px 0px 8px;
   }
   .container .product {
     display: flex;

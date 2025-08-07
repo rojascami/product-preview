@@ -24,7 +24,7 @@ body {
   border-radius: 8px;
   justify-content: space-around;
 
-  &__img {
+  picture > img {
     border-radius: 8px 8px 0 0;
     width: 100%;
   }
@@ -73,7 +73,7 @@ body {
     &__button {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
       width: 100%;
       align-self: center;
       background: var(--green-500);
@@ -88,8 +88,9 @@ body {
       outline: inherit;
 
       svg {
-        // margin: 7px;
-        align-self: center;
+        margin-right: 4px;
+        width: 26px;
+        // align-self: center;
       }
       &:hover{
         background-color: var(--green-700);
@@ -102,10 +103,13 @@ body {
     margin: 15rem 25rem;
     padding: 0px;
     flex-direction: row;
+    justify-content: space-between;
+    
 
-    &__img {
+    picture > img {
       height: 100%;
       object-fit: cover;
+      border-radius: 8px 0px 0px 8px;
     }
 
     .product {
